@@ -45,7 +45,7 @@ simpan.clear();
 ```
 
 ## Installing with Bower
-To install Vault into your project using Bower, use the GitHub repository hook:
+To install Simpan.js into your project using Bower, use the GitHub repository hook:
 
 ```
 bower install https://github.com/faizalpribadi/simpan.js.git
