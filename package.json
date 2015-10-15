@@ -1,0 +1,46 @@
+{
+  "name": "simpan.js",
+  "version": "1.0.0",
+  "description": "window local storage api",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-header": "^1.7.1",
+    "gulp-karma": "^0.0.5",
+    "gulp-jshint": "^1.11.2",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.4.2",
+    "jasmine-core": "^2.3.4",
+    "jshint-stylish": "^2.0.1",
+    "karma": "^0.13.11",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-jasmine": "^0.3.6",
+    "karma-spec-reporter": "^0.0.20",
+    "pure-prompt": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faizalpribadi/simpan.js.git"
+  },
+  "keywords": [
+    "window",
+    "local",
+    "storage",
+    "cache"
+  ],
+  "author": "@faizalpribadi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/faizalpribadi/simpan.js/issues"
+  },
+  "homepage": "https://github.com/faizalpribadi/simpan.js#readme"
+}
