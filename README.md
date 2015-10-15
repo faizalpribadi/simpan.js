@@ -57,7 +57,7 @@ bower install https://github.com/faizalpribadi/simpan.js.git
 <body>
 	<script src="dist/simpan.js"></script>
   <script>
-  vault.set('name', 'Faizal Pribadi');
+  simpan.set('name', 'Faizal Pribadi');
   </script>
 </body>
 ```
