@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Simpan.js by faizalpribadi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Simpan.js</h1>
+      <h2 class="project-tagline">Window Browser Local Storage API</h2>
+      <a href="https://github.com/faizalpribadi/simpan.js" class="btn">View on GitHub</a>
+      <a href="https://github.com/faizalpribadi/simpan.js/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/faizalpribadi/simpan.js/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="simpanjs-" class="anchor" href="#simpanjs-" aria-hidden="true"><span class="octicon octicon-link"></span></a>simpan.js <a href="https://travis-ci.org/faizalpribadi/simpan.js"><img src="https://travis-ci.org/faizalpribadi/simpan.js.svg" alt="Build Status"></a>
+</h1>
+
+<p>Window Browser Local Storage API</p>
+
+<p><code>simpan.js</code> is a <code>window.localStorage</code> API. The HTML5 spec permits localStorage to only accept a String as value of an Object property, Simpan makes it possible to store entire JavaScript Objects.</p>
+
+<h3>
+<a id="storing-and-objects-arguments" class="anchor" href="#storing-and-objects-arguments" aria-hidden="true"><span class="octicon octicon-link"></span></a>Storing and Objects arguments</h3>
+
+<p>Simpan allows you to automatically store JavaScript Objects and not just strings (default localStorage behaviour), allowing you to do the following:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> person <span class="pl-k">=</span> {
+    id<span class="pl-k">:</span> <span class="pl-c1">1</span>,
+    name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>Kamu<span class="pl-pds">'</span></span>,
+    members<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>Aku<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>Kamu<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>Dia<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>Mereka<span class="pl-pds">'</span></span>]
+}
+simpan.set(<span class="pl-s"><span class="pl-pds">'</span>person<span class="pl-pds">'</span></span>, person);</pre></div>
+
+<h3>
+<a id="set-api" class="anchor" href="#set-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>set API</h3>
+
+<p>To set data into localStorage, you must use the <code>set()</code> API. There are two arguments, <code>key</code> for the Object's key, and <code>value</code> for the key value:</p>
+
+<div class="highlight highlight-source-js"><pre>simpan.set(key, value);</pre></div>
+
+<h3>
+<a id="get-api" class="anchor" href="#get-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>get API</h3>
+
+<p>Obtaining set data is easy with the <code>get()</code> API, simply reference a previously set key with <code>key</code>:</p>
+
+<div class="highlight highlight-source-js"><pre>simpan.get(key);</pre></div>
+
+<h3>
+<a id="delete--remove-api" class="anchor" href="#delete--remove-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>delete || remove API</h3>
+
+<p>Deleting set data is easy with the <code>delete()</code> API, again reference a previously set key with <code>key</code>:</p>
+
+<div class="highlight highlight-source-js"><pre>simpan.delete(key);</pre></div>
+
+<h3>
+<a id="clear-api" class="anchor" href="#clear-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>clear API</h3>
+
+<p>It's a good idea to empty the user's localStorage when possible to avoid overloading it, there are limits which differ per browser. </p>
+
+<div class="highlight highlight-source-js"><pre>simpan.<span class="pl-c1">clear</span>();</pre></div>
+
+<h2>
+<a id="installing-with-bower" class="anchor" href="#installing-with-bower" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installing with Bower</h2>
+
+<p>To install Vault into your project using Bower, use the GitHub repository hook:</p>
+
+<pre><code>bower install https://github.com/faizalpribadi/simpan.js.git
+</code></pre>
+
+<h3>
+<a id="include-in-youre-html-file" class="anchor" href="#include-in-youre-html-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>include in you're html file</h3>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">body</span>&gt;
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>dist/simpan.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">  &lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">  vault.set(<span class="pl-s"><span class="pl-pds">'</span>name<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>Faizal Pribadi<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1">  &lt;/<span class="pl-ent">script</span>&gt;</span>
+&lt;/<span class="pl-ent">body</span>&gt;</pre></div>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/faizalpribadi/simpan.js">Simpan.js</a> is maintained by <a href="https://github.com/faizalpribadi">faizalpribadi</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
